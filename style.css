@@ -1,0 +1,33 @@
+body  {
+  width:100vw;
+}
+
+#container  {
+  width:800px;
+  height:800px;
+  background-color: black;
+  margin: auto;
+  position: relative;
+}
+
+#player {
+  box-sizing: border-box;
+  width:25px;
+  height:100px;
+  background-color: white;
+  /* border:2px solid blue; */
+  position: absolute;
+  right:10px;
+  top: 400px;
+}
+
+#computer {
+  box-sizing: border-box;
+  width:25px;
+  height:100px;
+  background-color: white;
+  /* border:2px solid blue; */
+  position: absolute;
+  left:10px;
+  top: 400px;
+}
