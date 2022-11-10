@@ -2,7 +2,7 @@ let ballElement = document.getElementById('ball');
 let playerElement = document.getElementById('player')
 let computerElement = document.getElementById('computer')
 
-let ballPosition = {x:400, y:400}
+let ballPosition = {x:400, y:400, dx:3,dy:5}
 let playerPosition = {x:0, y:0}
 
 
@@ -19,12 +19,29 @@ document.addEventListener('keydown', (e)=>{
   playerElement.style.top = playerPosition.y + 'px'
 
 })
-// let intervalID;
-// let count = 0;
+
+let intervalID;
+let count = 0;
 
 
 
-// const frame = () => {
-//   count++
+const frame = () => {
+  count++
+  if(count === 100){
+    clearInterval(intervalID)
+  }
 
-// }
+ballPosition.x += ballPosition.dx
+ballPosition.y += ballPosition.dy
+if ( ballPosition.x > 770 || ballPosition.x <= 0){
+  ballPosition.dx = ballPosition.dx * -1
+}
+if ( ballPosition.y > 775 || ballPosition.y <= 0 ){
+  ballPosition.dy = ballPosition.dy * -1
+}
+ballElement.style.top = ballPosition.y + 'px'
+
+ballElement.style.right = ballPosition.x + 'px'
+}
+
+intervalID= setInterval(frame, 10)
