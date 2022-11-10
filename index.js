@@ -27,7 +27,7 @@ let count = 0;
 
 const frame = () => {
   count++
-  if(count === 100){
+  if(count === 9999){
     clearInterval(intervalID)
   }
 
