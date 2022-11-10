@@ -30,13 +30,13 @@ const frame = () => {
   if(count === 9999){
     clearInterval(intervalID)
   }
-
+// console.log(count)
 ballPosition.x += ballPosition.dx
 ballPosition.y += ballPosition.dy
 if ( ballPosition.x > 770 || ballPosition.x <= 0){
   ballPosition.dx = ballPosition.dx * -1
 }
-if ( ballPosition.y > 775 || ballPosition.y <= 0 ){
+if ( ballPosition.y >= 775 || ballPosition.y <= 0 ){
   ballPosition.dy = ballPosition.dy * -1
 }
 ballElement.style.top = ballPosition.y + 'px'
