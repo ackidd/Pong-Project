@@ -31,3 +31,14 @@ body  {
   left:10px;
   top: 400px;
 }
+
+#ball {
+  box-sizing: border-box;
+  /* border:2px solid red; */
+  position: absolute;
+  width:25px;
+  height:25px;
+  background-color: white;
+  top: 425px;
+  right: 400px;
+}
