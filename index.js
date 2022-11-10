@@ -11,10 +11,10 @@ let playerPosition = {x:0, y:0}
 document.addEventListener('keydown', (e)=>{
   console.log('keydown', e.key)
   if(e.key =='ArrowUp'){
-    playerPosition.y -= 1;
+    playerPosition.y-=10;
   }
   if(e.key == 'ArrowDown'){
-    playerPosition.y += 1;
+    playerPosition.y+=10;
   }
   playerElement.style.top = playerPosition.y + 'px'
 
